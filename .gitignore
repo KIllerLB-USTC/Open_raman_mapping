@@ -1,0 +1,6 @@
+*.ipynb
+*.mp4
+*.avi
+*.mov
+/__pycache__
+
