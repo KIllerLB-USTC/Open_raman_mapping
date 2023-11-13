@@ -1,7 +1,7 @@
 # Software Functions and Elements
 
 
-![[ASI_control_raman_mapping_gui/1.gif]]
+![ASI_control_raman_mapping_gui/1.gif]
 ## Window:
 - **A**: Canvas for Mapping Points Drawing and Preview.
 - **B**: Real-time Camera Preview, compatible with all Basler Cameras and Camera systems that support the Pylon API.
