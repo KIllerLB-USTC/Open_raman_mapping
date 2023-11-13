@@ -522,7 +522,8 @@ class App:
         self.ASI.ser = serial.Serial(selected_port, 9600, timeout=1)
         print(self.ASI.ser.name)
         print("Port selected")
-        self.confirm_button.config(text="Port selected")
+        self.confirm_button.config(text="Port selected",bg="green")
+
 
     # def drive_ASI(self):
     #     for item in self.generate_path_set:
@@ -544,7 +545,7 @@ class App:
         
 
     def perform_movement_sequence(self):
-        self.drive_ASI_button.config(state=tk.DISABLED)
+        self.drive_ASI_button.config(state=tk.DISABLED,bg="red",text="Driving ASI...")
         for item in self.generate_path_set:
             x, y, _ = item
             x = float(x)
@@ -565,7 +566,7 @@ class App:
     def update_ui_after_movement(self):
         # 重置按钮状态
         self.ASI.ASI_XY_move_single(0,0)
-        self.drive_ASI_button.config(state=tk.NORMAL)
+        self.drive_ASI_button.config(state=tk.NORMAL,text="Drive ASI",bg="SystemButtonFace")
         self.refresh_button.config(state=tk.NORMAL)
         self.confirm_button.config(state=tk.NORMAL)
         #self.stop_button.config(state=tk.DISABLED)
